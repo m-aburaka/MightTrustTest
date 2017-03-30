@@ -27,10 +27,10 @@ namespace WebApplication1.Controllers
             new Setting {Key = "yes", Value = "no"}
         };
 
-        [Route("api/{searchfield}")]
+        [Route("api/{searchfield?}")]
         public IHttpActionResult GetItems(string searchfield)
         {
-            //use http://localhost:1939/api/getitems?searchfield= to access this method
+            //use http://localhost:1939/api/?searchfield= to access this method
 
             var list = new List<Setting>();
 
